@@ -1,15 +1,15 @@
 ﻿// Load sound effects to object
 var sfx = {
-    "lap": new Howl({ src: ['sounds/lap.mp3'] }),
-    "bump": new Howl({ src: ['sounds/bump.mp3'] }),
-    "click": new Howl({ src: ['sounds/click.mp3'] }),
-    "woosh": new Howl({ src: ['sounds/woosh.mp3'] }),
-    "skidd": new Howl({ src: ['sounds/skidd.mp3'], loop: true }),
-    "engine": new Howl({ src: ['sounds/engine.mp3'], loop: true, rate: 1 })
+    "lap": new Howl({ src: ['lap.mp3'] }),
+    "bump": new Howl({ src: ['bump.mp3'] }),
+    "click": new Howl({ src: ['click.mp3'] }),
+    "woosh": new Howl({ src: ['woosh.mp3'] }),
+    "skidd": new Howl({ src: ['skidd.mp3'], loop: true }),
+    "engine": new Howl({ src: ['engine.mp3'], loop: true, rate: 1 })
 }
 
 // Load music in a seperate object (in case we want to write an option to only mute SFX later)
-var music = new Howl({ src: ['music/Pixelland.mp3'], loop: true });
+var music = new Howl({ src: ['Pixelland.mp3'], loop: true });
 
 var volume = 0;
 

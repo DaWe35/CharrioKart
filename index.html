@@ -25,8 +25,8 @@
     <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
     <link href="style.css" rel="stylesheet" />
 
-    <script src="script/howler.min.js"></script>
-    <script src="script/three.min.js"></script>
+    <script src="howler.min.js"></script>
+    <script src="three.min.js"></script>
 </head>
 
 <body>
@@ -48,7 +48,7 @@
                 Build with <a href="http://www.threejs.org" target="_blank">three.js </a>&amp; <a href="https://www.howlerjs.com/"
                     target="_blank">howler.js</a>
             </p>
-            <img src="graphics/icons/cat.png" onclick="javascript:meow()" />
+            <img src="cat.png" onclick="javascript:meow()" />
             <div class="menuButton" onclick="showMenu('main')">
                 &lt;-BACK
             </div>
@@ -57,15 +57,15 @@
         <div id="menu_main" class="popup">
             <h2>SUPER CHARRIO KART</h2>
             <div class="menuButton" onclick="javascript:showMenu('racer')">
-                <img src="graphics/icons/kart.png" />
+                <img src="kart.png" />
                 SELECT YOUR KART
             </div>
             <div class="menuButton" onclick="javascript:showMenu('about')">
-                <img src="graphics/icons/about.png" />
+                <img src="about.png" />
                 ABOUT
             </div>
             <div class="menuButton" onclick="javascript:showMenu('settings')">
-                <img src="graphics/icons/settings.png" />
+                <img src="settings.png" />
                 SETTINGS
             </div>
         </div>
@@ -73,11 +73,11 @@
         <div id="menu_settings" class="popup">
             <h2>SETTINGS</h2>
             <div class="menuButton" onclick="javascript:toggleVolume()">
-                <img src="graphics/icons/sound.png" />
+                <img src="sound.png" />
                 <span id="volume_1">SOUNDS (all)</span>
             </div>
             <div class="menuButton" onclick="javascript:toggleFullscreen()">
-                <img src="graphics/icons/fullscreen.png" />
+                <img src="fullscreen.png" />
                 TOGGLE FULLSCREEN
             </div>
             <div class="menuButton" onclick="javascript:showMenu('main')">
@@ -88,19 +88,19 @@
         <div id="menu_racer" class="popup">
             <h2>SELECT YOUR KART</h2>
             <div class="menuButton secret" onclick="javascript:setRacer('taimi')" style="display: none; color: #ffd800">
-                <img src="graphics/icons/taimi.png" />
+                <img src="icon_taimi.png" />
                 TAIMI
             </div>
             <div class="menuButton" onclick="javascript:setRacer('kartA')">
-                <img src="graphics/icons/kartA.png" />
+                <img src="icon_kartA.png" />
                 EASY:&nbsp;&nbsp; YESTERMOBILE MARK 7
             </div>
             <div class="menuButton" onclick="javascript:setRacer('kartB')">
-                <img src="graphics/icons/kartB.png" />
+                <img src="icon_kartB.png" />
                 MEDIUM: CENTURION 2B-1G
             </div>
             <div class="menuButton" onclick="javascript:setRacer('kartC')">
-                <img src="graphics/icons/kartC.png" />
+                <img src="icon_kartC.png" />
                 HARD:&nbsp;&nbsp; SALT MACHINE 2000
             </div>
             <div class="menuButton" onclick="javascript:showMenu('main')">
@@ -111,28 +111,28 @@
         <div id="menu_track" class="popup">
             <h2>SELECT A LOCATION</h2>
             <div class="menuButton secret" onclick="loadMap('inquest')">
-                <img src="graphics/icons/trackMaguuma.png" />
+                <img src="trackMaguuma.png" />
                 Inquest Base
             </div>
             <div class="menuButton" onclick="loadMap('ascalon')">
-                <img src="graphics/icons/trackAscalon.png" />
+                <img src="trackAscalon.png" />
                 Ascalon
             </div>
             <div class="menuButton" onclick="loadMap('kryta')">
-                <img src="graphics/icons/trackKryta.png" />
+                <img src="trackKryta.png" />
                 Kryta
             </div>
             <div class="menuButton" onclick="loadMap('shiverpeak')">
-                <img src="graphics/icons/trackShiverpeaks.png" />
+                <img src="trackShiverpeaks.png" />
                 Shiverpeaks
             </div>
             <div class="menuButton" onclick="loadMap('southsun')">
-                <img src="graphics/icons/trackSouthsun.png" />
+                <img src="trackSouthsun.png" />
                 Southsun
             </div>
 
             <div class="menuButton" onclick="loadMap('mists')">
-                <img src="graphics/icons/trackMists.png" />
+                <img src="trackMists.png" />
                 The Mists
             </div>
             <div class="menuButton" onclick="showMenu('racer')">&lt;- BACK</div>
@@ -151,15 +151,15 @@
             <div class="gameMenuPopup">
                 <h2>PAUSED</h2>
                 <div class="menuButton" onclick="javascript:unpause()" id="resume">
-                    <img src="graphics/icons/kart.png" />
+                    <img src="kart.png" />
                     RESUME RACING
                 </div>
                 <div class="menuButton" onclick="javascript:toggleVolume()">
-                    <img src="graphics/icons/sound.png" />
+                    <img src="sound.png" />
                     <span id="volume_2">SOUNDS (all)</span>
                 </div>
                 <div class="menuButton" onclick="javascript:toggleFullscreen()">
-                    <img src="graphics/icons/fullscreen.png" />
+                    <img src="fullscreen.png" />
                     TOGGLE FULLSCREEN
                 </div>
                 <div class="menuButton" onclick="javascript:unloadTrack()">
@@ -169,16 +169,16 @@
         </div>
         <div id="touch">
             <div id="left" class="touchButton">
-                <img src="graphics/left.png" />
+                <img src="left.png" />
             </div>
             <div id="right" class="touchButton">
-                <img src="graphics/right.png" />
+                <img src="right.png" />
             </div>
             <div id="aButton" class="touchButton">
-                <img src="graphics/aButton.png" />
+                <img src="aButton.png" />
             </div>
             <div id="bButton" class="touchButton">
-                <img src="graphics/bButton.png" />
+                <img src="bButton.png" />
             </div>
 
         </div>
@@ -186,11 +186,11 @@
     </div>
 
     <!-- required includes -->
-    <script src="app/input.js"></script>
-    <script src="app/sfx.js"></script>
-    <script src="app/racers.js"></script>
-    <script src="app/track.js"></script>
-    <script src="app/main.js"></script>
+    <script src="input.js"></script>
+    <script src="sfx.js"></script>
+    <script src="racers.js"></script>
+    <script src="track.js"></script>
+    <script src="main.js"></script>
 
 </body>
 

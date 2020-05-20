@@ -99,7 +99,7 @@
 
         // Load map JSON
         xhr = new XMLHttpRequest();
-        xhr.open("GET", "tracks/" + self.TrackName + "/map.json", true);
+        xhr.open("GET", self.TrackName + "_map.json", true);
         xhr.onreadystatechange = function () {
             if (xhr.readyState == 4 && xhr.status == 200) {
                 var json = JSON.parse(xhr.responseText);
@@ -400,7 +400,7 @@
         //
         geometry.map = new THREE.PlaneGeometry(100, 100);
         geometry.map.rotateX(-(Math.PI / 2));
-        textures.map = new THREE.TextureLoader().load("tracks/" + self.TrackName + "/map.png", function () { loadingstack -= 1; });
+        textures.map = new THREE.TextureLoader().load(self.TrackName + "_map.png", function () { loadingstack -= 1; });
         textures.map.generateMipmaps = false;
         textures.map.minFilter = THREE.NearestFilter;
         textures.map.magFilter = THREE.NearestFilter;
@@ -412,7 +412,7 @@
         // Player kart
         //
         geometry.kart = new THREE.PlaneGeometry(0.8, 0.8);
-        textures.kart = new THREE.TextureLoader().load("graphics/racers/" + racer + ".png", function () { loadingstack -= 1; });
+        textures.kart = new THREE.TextureLoader().load(racer + ".png", function () { loadingstack -= 1; });
         textures.kart.generateMipmaps = false;
         textures.kart.minFilter = THREE.NearestFilter;
         textures.kart.magFilter = THREE.NearestFilter;
@@ -428,7 +428,7 @@
         geometry.outOfBounds.rotateX(-(Math.PI / 2));
         geometry.outOfBounds.translate(0, -0.05, 0);
 
-        textures.outOfBounds = new THREE.TextureLoader().load("tracks/" + self.TrackName + "/default.png", function () { loadingstack -= 1; });
+        textures.outOfBounds = new THREE.TextureLoader().load(self.TrackName + "_default.png", function () { loadingstack -= 1; });
         textures.outOfBounds.generateMipmaps = false;
         textures.outOfBounds.wrapS = THREE.RepeatWrapping;
         textures.outOfBounds.wrapT = THREE.RepeatWrapping;
@@ -444,7 +444,7 @@
         // Skybox (far)
         //
         geometry.skyBox = new THREE.PlaneGeometry(500, 125);
-        textures.skyBox = new THREE.TextureLoader().load("tracks/" + self.TrackName + "/skybox.png", function () { loadingstack -= 1; });
+        textures.skyBox = new THREE.TextureLoader().load(self.TrackName + "_skybox.png", function () { loadingstack -= 1; });
         textures.skyBox.generateMipmaps = false;
         textures.skyBox.minFilter = THREE.NearestFilter;
         textures.skyBox.magFilter = THREE.NearestFilter;
@@ -470,7 +470,7 @@
         //
         geometry.background = new THREE.PlaneGeometry(320, 80);
         for (i = 0; i < 4; i++) {
-            textures.background.push(new THREE.TextureLoader().load("tracks/" + self.TrackName + "/background_" + i + ".png", function () { loadingstack -= 1; }));
+            textures.background.push(new THREE.TextureLoader().load(self.TrackName + "_background_" + i + ".png", function () { loadingstack -= 1; }));
             textures.background[i].generateMipmaps = false;
             textures.background[i].minFilter = THREE.NearestFilter;
             textures.background[i].magFilter = THREE.NearestFilter;
